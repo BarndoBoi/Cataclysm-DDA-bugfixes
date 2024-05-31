@@ -637,5 +637,21 @@
     "qualities": [ [ "CHISEL", 1 ], [ "CHISEL_WOOD", 1 ] ],
     "flags": [ "BELT_CLIP" ],
     "melee_damage": { "bash": 2, "cut": 1 }
+  },
+  {
+    "id": "splitting_wedge",
+    "type": "TOOL",
+    "name": { "str": "splitting wedge" },
+    "looks_like": "stick_long",
+    "description": "A triangular wooden wedge meant to split apart logs.",
+    "weight": "2500 g",
+    "volume": "1048 ml",
+    "longest_side": "40 cm",
+    "price": "0 cent",
+    "to_hit": -1,
+    "material": [ "wood" ],
+    "symbol": "/",
+    "color": "brown",
+    "melee_damage": { "bash": 2, "cut": 1 }
   }
 ]

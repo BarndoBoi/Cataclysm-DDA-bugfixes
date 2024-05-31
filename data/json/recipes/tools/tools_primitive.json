@@ -496,5 +496,19 @@
     ],
     "using": [ [ "blacksmithing_standard", 13 ], [ "steel_standard", 1 ] ],
     "components": [ [ [ "2x4", 2 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "splitting_wedge",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "proficiencies": [ { "proficiency": "prof_carving", "time_multiplier": 3, "skill_penalty": 0 } ],
+    "difficulty": 1,
+    "time": "1 h",
+    "autolearn": true,
+    "qualities": [ { "id": "CUT", "level": 1 } ],
+    "components": [ [ [ "stick_long", 1 ], [ "2x4", 1 ], [ "inferior_2x4", 1 ] ] ]
   }
 ]
