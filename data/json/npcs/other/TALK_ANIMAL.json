@@ -1,0 +1,8 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_DOG",
+    "dynamic_line": "&The dog watches you carefully.",
+    "responses": [ { "text": "Good doggy.", "topic": "TALK_DONE" } ]
+  }
+]

@@ -1034,6 +1034,7 @@
     "hp": 30,
     "speed": 150,
     "material": [ "flesh" ],
+    "chat_topics": [ "TALK_DOG" ],
     "symbol": "d",
     "color": "light_gray",
     "aggression": -10,
