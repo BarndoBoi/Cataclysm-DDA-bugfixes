@@ -360,7 +360,15 @@
   },
   {
     "type": "overmap_terrain",
-    "id": [ "s_gun_roof", "s_gun_roof_1", "s_gun_roof_3", "s_gun_roof_4", "s_gunstore_roof" ],
+    "id": [
+      "s_gun_roof",
+      "s_gun_upper_roof",
+      "s_gun_roof_1",
+      "s_gun_upper_roof_1",
+      "s_gun_roof_3",
+      "s_gun_roof_4",
+      "s_gunstore_roof"
+    ],
     "name": "gun store roof",
     "looks_like": "s_gun_roof",
     "copy-from": "generic_city_building",
@@ -467,6 +475,7 @@
       "s_restaurant_roof",
       "s_restaurant_roof_1",
       "s_restaurant_roof_2",
+      "s_restaurant_upper_roof_2",
       "s_restaurant_roof_3"
     ],
     "copy-from": "generic_city_building",
@@ -1501,11 +1510,13 @@
   },
   {
     "type": "overmap_terrain",
+    "//": "Obsolete 2024-06-24. Remains to work in existing saves",
     "id": "cs_market_small_roof",
     "name": "small market roof",
     "copy-from": "generic_city_building",
     "sym": "m",
-    "color": "i_light_gray"
+    "color": "i_light_gray",
+    "flags": [ "SHOULD_NOT_SPAWN" ]
   },
   {
     "type": "overmap_terrain",

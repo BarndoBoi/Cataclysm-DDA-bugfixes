@@ -64,6 +64,7 @@ static const efftype_id effect_downed( "downed" );
 static const efftype_id effect_dragging( "dragging" );
 static const efftype_id effect_grabbed( "grabbed" );
 static const efftype_id effect_harnessed( "harnessed" );
+static const efftype_id effect_immobilization( "immobilization" );
 static const efftype_id effect_led_by_leash( "led_by_leash" );
 static const efftype_id effect_no_sight( "no_sight" );
 static const efftype_id effect_operating( "operating" );
@@ -895,6 +896,10 @@ void monster::move()
         moves = 0;
         return;
     }
+    if( has_effect( effect_immobilization ) ) {
+        moves = 0;
+        return;
+    }
     if( has_effect( effect_stunned ) || has_effect( effect_psi_stunned ) ) {
         stumble();
         moves = 0;
@@ -1011,10 +1016,7 @@ void monster::move()
                 } else {
                     path = here.straight_route( pos(), local_dest );
                     if( !path.empty() ) {
-                        std::unordered_set<tripoint> closed = get_path_avoid();
-                        if( std::any_of( path.begin(), path.end(), [&closed]( const tripoint & p ) {
-                        return closed.count( p );
-                        } ) ) {
+                        if( std::any_of( path.begin(), path.end(), get_path_avoid() ) ) {
                             path.clear();
                         }
                     }
